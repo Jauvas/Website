@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function openModal(imageUrl) {
     var modal = document.getElementById("modal");
     var modalImg = document.getElementById("modal-img");
-    modal.style.display = "block";
+    modal.style.display = "flex";
+    modal.style.marginTop = "85px"
     modalImg.src = imageUrl;
 }
 
