@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetCafe Bistro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/topimage.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>NetCafe Bistro</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <div class=" slider container">
+                <div class="product-container">
+                  <div class="slider-container">
+                    <div class="slider-wrapper">
+                      <div class="slider-item">
+                        <img src="images/image1.jpg" alt="Wireless Earbuds" class="product-img">
+                      </div>
+                      <div class="slider-item">
+                        <img src="images/image2.jpg" alt="Tablet" class="product-img">
+                      </div>
+                      <div class="slider-item">
+                        <img src="images/image6.jpg" alt="Smartwatch" class="product-img">
+                      </div>
+                      <!-- Add more products as needed -->
+                    </div>
+                  </div>
+                </div>
+              
+              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script>
+                // JavaScript for the image slider
+                const sliderWrapper = document.querySelector('.slider-wrapper');
+                let currentIndex = 0;
+              
+                setInterval(() => {
+                  currentIndex = (currentIndex + 1) % sliderWrapper.children.length;
+                  updateSlider();
+                }, 3000);
+              
+                function updateSlider() {
+                  const translateValue = -currentIndex * 100 + '%';
+                  sliderWrapper.style.transform = 'translateX(' + translateValue + ')';
+                }
+            </script>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to NetCafe Bistro, your ultimate destination for surfing the internet, watching football, and enjoying delicious meals. Whether you're here to work, relax, or catch the latest game, we have something for everyone.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>High-Speed Internet</h3>
+            <p>Stay connected with our reliable high-speed internet service, perfect for browsing, streaming, and gaming.</p>
+        </div>
+        <div class="service">
+            <h3>Live Sports</h3>
+            <p>Watch live football matches and other sports events on our big screens while enjoying a drink or meal.</p>
+        </div>
+        <div class="service">
+            <h3>Delicious Food</h3>
+            <p>Indulge in a variety of tasty dishes, from quick snacks to full meals, all freshly prepared by our chefs.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-images">
+            <img src="images/image1.jpg" alt="Gallery Image 1">
+            <img src="images/image2.jpg" alt="Gallery Image 2">
+            <img src="images/image3.jpg" alt="Gallery Image 3">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@netcafebistro.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Internet Lane, City, Country</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 NetCafe Bistro. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
