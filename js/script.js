@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         images[currentIndex].classList.add('active');
     }
 
-    setInterval(showNextImage, 3000); // Change image every 3 seconds
+    setInterval(showNextImage, 5000); // Change image every 5 seconds
 });
 
 
