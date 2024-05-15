@@ -85,9 +85,14 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery-images">
-            <img src="images/image1.jpg" alt="Gallery Image 1">
-            <img src="images/image2.jpg" alt="Gallery Image 2">
-            <img src="images/image3.jpg" alt="Gallery Image 3">
+            <img src="images/image1.jpg" alt="Gallery Image 1" onclick="openModal('images/image1.jpg')">
+            <img src="images/image2.jpg" alt="Gallery Image 2" onclick="openModal('images/image2.jpg')">
+            <img src="images/image3.jpg" alt="Gallery Image 3" onclick="openModal('images/image3.jpg')">
+        </div>
+
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-img" class="modal-content" src="">
         </div>
     </section>
 
