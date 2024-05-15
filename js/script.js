@@ -1,18 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelector('.slides');
-    const images = document.querySelectorAll('.slides img');
-    let index = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.gallery-image');
+    let currentIndex = 0;
 
-    function nextSlide() {
-        index++;
-        if (index >= images.length) /*(index >= totalSlides - 2)*/ {
-            index = 0;
-        }
-        slides.style.transform = `translateX(${-index * 33.33}%)`;
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
     }
 
-    setInterval(nextSlide, 3000);
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
 });
+
 
 
 function openModal(imageUrl) {

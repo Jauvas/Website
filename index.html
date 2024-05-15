@@ -21,44 +21,27 @@
     </header>
 
     <section>
-        <div>
-            <div class=" slider container">
-                <div class="product-container">
-                  <div class="slider-container">
-                    <div class="slider-wrapper">
-                      <div class="slider-item">
-                        <img src="images/image1.jpg" alt="Wireless Earbuds" class="product-img">
-                      </div>
-                      <div class="slider-item">
-                        <img src="images/image2.jpg" alt="Tablet" class="product-img">
-                      </div>
-                      <div class="slider-item">
-                        <img src="images/image6.jpg" alt="Smartwatch" class="product-img">
-                      </div>
-                      <!-- Add more products as needed -->
-                    </div>
-                  </div>
-                </div>
-              
-              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-            <script>
-                // JavaScript for the image slider
-                const sliderWrapper = document.querySelector('.slider-wrapper');
-                let currentIndex = 0;
-              
-                setInterval(() => {
-                  currentIndex = (currentIndex + 1) % sliderWrapper.children.length;
-                  updateSlider();
-                }, 3000);
-              
-                function updateSlider() {
-                  const translateValue = -currentIndex * 100 + '%';
-                  sliderWrapper.style.transform = 'translateX(' + translateValue + ')';
-                }
-            </script>
+        <div class="image-gallery">
+            <img class="gallery-image active" src="images/image1.jpg" alt="Image 1">
+            <img class="gallery-image" src="images/image2.jpg" alt="Image 2">
+            <img class="gallery-image" src="images/image3.jpg" alt="Image 3">
+            <img class="gallery-image" src="images/image4.jpg" alt="Image 4">
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.gallery-image');
+            let currentIndex = 0;
+
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            setInterval(showNextImage, 5000); // Change image every 5 seconds
+            });
+        </script>
     </section>
 
     <section id="about">
@@ -111,5 +94,20 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.gallery-image');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+        });
+
+    </script>
 </body>
 </html>
