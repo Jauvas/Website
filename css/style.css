@@ -189,6 +189,7 @@ footer {
     opacity: 0;
     transition: opacity 2s ease-in-out;
     margin-top: 50px;
+    cursor: pointer;
 }
 
 .gallery-image.active {
