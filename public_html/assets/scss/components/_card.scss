@@ -1,0 +1,43 @@
+.card {
+    border-color: $card-border-color;
+    overflow: hidden;
+}
+
+.service-card {
+    position: relative;
+    text-align: center;
+
+    .service-title {
+        font-size: $service-title-font-size;
+    }
+
+    .service-subtitle {
+        font-size: $service-subtitle-font-size;
+        letter-spacing: $service-subtitle-spacing;
+        opacity: $service-subtitle-opacity;
+    }
+
+    .service-body {
+        position: relative;
+        padding: $service-body-padding;
+        border: $service-border-width solid $border-color;
+        border-top-color: $pink;
+        border-radius: $service-border-radius;
+        margin-top: $service-top-spacer;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            border-color: $pink;
+            border-radius: $service-border-radius 0 0 0 ;
+            border-style: solid;
+            border-width:  2px 0 0 2px;
+            transform: rotate(45deg) translateX(-50%);
+            background: $gray-800;
+        }
+    }
+}
